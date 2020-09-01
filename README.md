@@ -92,7 +92,7 @@ try {
                 [parentTypeId] => 17
                 [sortOrder] => 3
             )
-    
+
         [1] => stdClass Object
             (
                 [typeId] => 2
@@ -101,7 +101,7 @@ try {
                 [sortOrder] => 8
             )
 
- 
+
 ### getActivityList(integer $intStart, integer $intLimit, string $strActivityType)
 
 Returns a stdClass object, which contains an array called results, that contains stdClass objects that represents an activity. It accepts three parameters - start, limit and activity type; start is the record that you wish to start from, limit is the number of records that you would like returned, and activity type is the (optional) string representation of the activity type returned from `getActivityTypes()`
@@ -138,12 +138,12 @@ Returns a stdClass object, which contains an array called results, that contains
 
                                     [activityDescription] => stdClass Object
                                         (
-                                            [value] => 
+                                            [value] =>
                                         )
 
                                     [locationName] => stdClass Object
                                         (
-                                            [value] => 
+                                            [value] =>
                                         )
 
                                     [userId] => 1653429
@@ -233,6 +233,7 @@ Returns a string representation of requested data type, for the given activity I
 |\dawguk\GarminConnect::DATA_TYPE_GPX | GPX as XML string |
 |\dawguk\GarminConnect::DATA_TYPE_TCX | TCX as XML string |
 |\dawguk\GarminConnect::DATA_TYPE_GOOGLE_EARTH | Google Earth as XML string |
+|\dawguk\GarminConnect::DATA_TYPE_FIT | FIT GIS data as string |
 
 #### Example
 
@@ -342,7 +343,7 @@ Returns a JSON object of the created workout.
 
 ```php
 try {
-   $data = ''; 
+   $data = '';
    $objGarminConnect = new \dawguk\GarminConnect($arrCredentials);
    $obj_results = $objGarminConnect->createWorkout($data);
    print_r($obj_results);
